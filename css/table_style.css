@@ -1,0 +1,31 @@
+table, th, td{
+    border-style: ridge;
+    border-width: 7px;
+    border-color: coral;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 8px;
+}
+
+.row-lunch{
+    font-weight: bold;
+}
+
+.caption{
+    font-weight: bold;
+    font-size: 4em;
+    margin: 10px;
+}
+
+.bold{
+    font-weight: bold;
+    font-size: 18px;
+    background-color: brown;
+    color:white;
+}
+
+.font-size{
+    font-size: 18px;
+    background-color: brown;
+    color:white;
+}

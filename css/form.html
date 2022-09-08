@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+<body>
+    <fieldset>
+        <legend style="font-weight: bold; font-size: 22px;">Registration Form</legend>
+        <form method="post" align="center">
+            <label for="name">Name:</label>
+            <input type="text" name="name">
+            <br><br>
+
+            <label for="email">Name:</label>
+            <input type="email" name="email">
+            <br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" name="pass">
+            <br><br>
+
+            <label for="Bio:">Bio:</label>
+            <textarea name="bio" rows="10" cols="30"></textarea>
+            <br><br>
+
+            <label for="photo">Photo:</label>
+            <input type="file" name="photo">
+            <br><br>
+
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female">Female
+            <br><br>
+
+            <label for="hobby">Hobby:</label>
+            <input type="checkbox" name="hobby" value="cricket">Cricket
+            <input type="checkbox" name="hobby" value="Voleyball">Voleyball
+            <input type="checkbox" name="hobby" value="Luddo">Luddo
+            <br><br>
+
+            <label for="country">Country:</label>
+            <select name="Country">
+                <option name="india">India</option>
+                <option name="usa">USA</option>
+                <option name="uk">UK</option>
+            </select>
+            <br><br>
+
+            <input type="submit" name="submit" value="Submit">
+            <input type="submit" name="reset" value="Reset">
+
+            
+
+        </form>
+    </fieldset>
+</body>
+</html>
