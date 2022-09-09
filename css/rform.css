@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aquamarine;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+#Rform{
+    margin-top: 30px;
+}
+
+#label{
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    
+}
+
+
+input[type=text], input[type=password], input[type=email],  input[type=date], textarea{
+    width: 40%;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 4px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  input[type=radio]{
+    width: 18px;
+    height: 18px;
+    text-align: center;
+  }
+
+  input[type=submit]{
+  background-color: aquamarine;  
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  }
+
+  input[type=submit]:hover{
+    color: white;
+    background-color: #4CAF50;
+  }
