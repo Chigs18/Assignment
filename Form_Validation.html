@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form_Validation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        table {
+            background-color: black;
+            border-radius: 12px;
+            border: none;
+            color: whitesmoke;
+            height: 300px;
+            padding: 8px;
+            margin: 40px 37%;
+        }
+
+        input {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 8px;
+            border-bottom: 1px solid white;
+            outline: none;
+            width: 300px;
+            margin-left: 10px;
+        }
+
+        .required:after{
+            content: "*";
+            color: red;
+            padding: 3px;
+        }
+
+        button{
+            padding: 7px;
+            border-radius: 8px;
+            background-color: black;
+            color: white;
+            border: 1px solid whitesmoke;
+            
+        }
+
+        button:hover{
+            background-color: whitesmoke;
+            color: black;
+        }
+
+        h2{
+            text-align: center;
+            margin-top: 45px;
+        }
+       
+    </style>
+</head>
+
+<body>
+    
+        <table border="0" >
+           
+            <form method="post" action="welcome.html">
+                <h2>Enter Info</h2>
+                <tr>
+                    <td><p class="required">Name:</p></td>
+                    <td><input type="text" name="name" pattern="[aA-zZ]{3,}" title="Minimum 3 charachter or more"></td>
+                </tr>
+                <tr>
+                    <td><p class="required">Email:</p></td>
+                    <td><input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            title="Invalid Email ID"></td>
+                </tr>
+                <tr>
+                    <td><p class="required">Password:</p></td>
+                    <td><input type="password" name="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p class="required">Mobile:</p></td>
+                    <td><input type="" name="number" pattern="[0-9][{10}" title="Must enter 10 digit number"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button type="submit" name="submit">Submit</button></td>
+                </tr>
+            </form>
+        </table>
+    
+</body>
+
+</html>
