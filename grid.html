@@ -1,1 +1,112 @@
-hfkj
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+            gap: 10px;
+            height: 100%;
+        }
+
+        #item-0 {
+            background-color: #ec091f;
+            grid-row-start: 1;
+            grid-column-start: 1;
+
+            grid-row-end: 3;
+            grid-column-end: 2;
+            height: 400px;
+            width: 325px;
+            border: 1px solid white;
+        }
+        #item-1 {
+            background-color: #ecb709;
+            grid-row-start: 1;
+            grid-column-start: 2;
+
+            grid-row-end: 2;
+            grid-column-end: 3;
+        }
+        #item-2 {
+            background-color: #09ecce;
+            grid-row-start: 1;
+            grid-column-start: 3;
+
+            grid-row-end: 3;
+            grid-column-end: 4;
+        }
+        #item-3 {
+            background-color: #0999ec;
+            grid-row-start: 1;
+            grid-column-start: 4;
+
+            grid-row-end: 2;
+            grid-column-end: 5;
+        }
+        #item-4 {
+            background-color: #0999ec;
+            grid-row-start: 1;
+            grid-column-start: 4;
+
+            grid-row-end: 2;
+            grid-column-end: 5;
+        }
+        #item-5 {
+            background-color: #e409ec;
+            grid-row-start: 3;
+            grid-column-start: 1;
+
+            grid-row-end: 4;
+            grid-column-end: 2;
+        }
+        #item-6 {
+            background-color: #ec097a;
+            grid-row-start: 2;
+            grid-column-start: 2;
+
+            grid-row-end: 4;
+            grid-column-end: 3;
+        }
+        #item-7 {
+            background-color: #09ecec;
+            grid-row-start: 3;
+            grid-column-start: 3;
+
+            grid-row-end: 4;
+            grid-column-end: 4;
+        }
+        #item-8 {
+            background-color: #09ecb3;
+            grid-row-start: 2;
+            grid-column-start: 4;
+
+            grid-row-end: 4;
+            grid-column-end: 5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="item-0"> <img src="images/g1.jpg" alt="" height="400px" width="325px"> </div>
+        <div id="item-1"> <img src="images/g2.jpg" alt="" height="196px" width="325px"> </div>
+        <div id="item-2"> <img src="images/g3.jpg" alt="" height="400px" width="325px"> </div>
+        <div id="item-3"> <img src="images/g4.jpg" alt="" height="196px" width="325px"> </div>
+        
+        <div id="item-5"> <img src="images/g5.jpg" alt="" height="196px" width="325px"> </div>
+        <div id="item-6"> <img src="images/g6.jpg" alt="" height="400px" width="325px"> </div>
+        <div id="item-7"> <img src="images/g7.jpg" alt="" height="196px" width="325px"> </div>
+        <div id="item-8"> <img src="images/g8.jpg" alt="" height="400px" width="325px"></div>
+    </div>
+</body>
+
+</html>
