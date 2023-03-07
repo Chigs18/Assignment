@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model</title>
+  <style>
+    
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.model-open{
+  padding: 8px;
+  background-color: cornflowerblue;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  color: aliceblue;
+  font-size: 16px;
+  margin: 20px 30px;
+  
+}
+
+.model{
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0;
+  background: rgb(174, 170, 170, .4);
+  z-index: 2;
+  display: none;
+}
+
+.showModel{
+  display: block;
+}
+
+.model-content{
+  background-color: aliceblue;
+  position: relative;
+  width: 50%;
+  margin:200px auto;
+  border-radius: 5px;
+}
+
+.header{
+  padding: 15px;
+}
+span{
+  /* content: 'X'; */
+  position: absolute;
+  right: 15px;
+  font-size: 25px;
+  font-weight: 900;
+  top: 15px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  background-color: rgb(242, 74, 74);
+  border-radius: 50%;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.body, .footer{
+  padding: 15px;
+}
+
+
+.footer .link{
+  padding: 7px 12px;
+  background-color: cornflowerblue;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  color: aliceblue;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+  </style>
+  
+</head>
+
+<body>
+  <button class="model-open" onclick="openModel()">Model 1</button>
+  <button class="model-open" onclick="openModel()">Model 2</button>
+  <button class="model-open" onclick="openModel()">Model 3</button>
+
+  <!-- model create -->
+  <div class="model" id="openModel" >
+    <div class="model-content">
+      <div class="header"><h2>Model</h2><span onclick="closeModel()">&times;</span></div>
+      <div class="body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure magnam earum sapiente? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus assumenda ratione labore!</div>
+      <div class="footer"><button class="link close-model" onclick='closeModel()'>Close</button></div>
+    </div>
+  </div>
+
+  
+
+
+  <script> 
+  let popup = document.getElementById('openModel');
+
+function openModel(){
+  popup.classList.add('showModel');
+}
+
+function closeModel(){
+  popup.classList.remove('showModel');
+}
+
+window.onclick = function(event) {
+  if (event.target == popup) {
+    popup.classList.remove('showModel');
+  }
+}
+  </script>
+</body>
+
+</html>
