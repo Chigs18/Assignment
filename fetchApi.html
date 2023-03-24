@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FetchApi</title>
+</head>
+
+<style>
+  th{
+    padding: 20px;
+  }
+</style>
+
+<body>
+
+  <table border="1">
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Category</th>
+      <th>Image</th>
+      <th>Rating</th>
+      
+    </tr>
+    <tbody id="display"></tbody>
+  </table>
+
+  <script>
+    
+    fetch('https://fakestoreapi.com/products').then((res)=>res.json())
+    .then((Response)=>{console.log(Response);
+    HTMLData = '';
+    Response.forEach(element => { 
+      HTMLData += `<tr>
+            <td>${element.id}</td>
+            <td>${element.title}</td>
+            <td>${element.price}</td>
+            <td>${element.category}</td>
+            <td> <img src="${element.image}" width="100" height="100"></td>
+            <td>
+              <div>Rate:${element.rating.rate}</div>
+               <div>Count:${element.rating.count}</div>
+               </td>
+          </tr>`
+      });
+      document.querySelector('#display').innerHTML = HTMLData;
+    })
+    .catch((error)=>{
+      console.log(error);
+    });
+    
+
+
+  </script>
+</body>
+
+</html>
