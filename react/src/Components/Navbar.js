@@ -12,10 +12,12 @@ import DatenTime from './DatenTime';
 import Greeting from './Greeting'
 import StopWatch from './StopWatch';
 import ListView from './ListView';
+import StateChange from './StateChange';
 
 export default function Navbar(props) {
   const MenuData = { '/breakfast': 'Breakfast', '/lunch': 'Lunch', '/dinner': 'Dinner', 
-  '/datentime':'DatenTime', '/greeting': 'Greeting', '/stopwatch':'StopWatch','/listview':'ListView' }
+  '/datentime':'DatenTime', '/greeting': 'Greeting', '/stopwatch':'StopWatch','/listview':'ListView', './statechange':'StateChange' }
+
   let color = {color :'purple', fontFamily: '"Josefin Sans", sans-serif', fontWeight : 'bold'};
 
   const links = Object.entries(MenuData).map((res) => {
@@ -49,6 +51,7 @@ export default function Navbar(props) {
         <Route path='/greeting' element={<Greeting />} />
         <Route path='/stopwatch' element={<StopWatch />} />
         <Route path='/listview' element={<ListView />} />
+        <Route path='/statechange' element={<StateChange />} />
 
       </Routes>
     </Router>
